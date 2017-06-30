@@ -8,43 +8,43 @@
     -->
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="{{ route('dashboard') }}" class="simple-text">
+                <a href="#" class="simple-text">
                     Katalog
                 </a>
             </div>
             <ul class="nav">
                 <li>
-                    <a href="{{ route('dashboard') }}">
+                    <a href="#">
                         <i class="pe-7s-home"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('user.index') }}">
+                    <a href="#">
                         <i class="pe-7s-user"></i>
                         <p>Manajemen User</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('toko.index') }}">
+                    <a href="#">
                         <i class="pe-7s-photo-gallery"></i>
                         <p>Manajemen Toko</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('information.index') }}">
+                    <a href="#">
                         <i class="pe-7s-edit"></i>
                         <p>Menu Informasi</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('category.index') }}">
+                    <a href="#">
                         <i class="pe-7s-edit"></i>
                         <p>Menu Kategori</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('dashboard') }}">
+                    <a href="#">
                         <i class="pe-7s-note2"></i>
                         <p>Laporan</p>
                     </a>

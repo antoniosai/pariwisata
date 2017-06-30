@@ -38,7 +38,7 @@ Route::group(['prefix' => 'about_us'], function(){
 
 Route::group(['prefix' => 'information'], function(){
     Route::get('/', 'FrontController@information')->name('home.information');
-    Route::get('read/{id}', 'FrontController@readInformation')->name('home.information.read');
+    Route::get('read/{slug}', 'FrontController@readInformation')->name('home.information.read');
 });
 
 Auth::routes();
@@ -61,6 +61,31 @@ Route::group(['prefix'=> 'admin'], function(){
         Route::get('delete/{id}', 'UserController@delete');
     });
 
+    Route::group(['prefix' => 'paket'], function(){
+        Route::get('/', 'PaketController@index')->name('admin.paket.index');
+
+        Route::get('detail/{id}', 'PaketController@detail')->name('admin.paket.detail');
+    
+        Route::get('add', 'PaketController@getAdd')->name('admin.paket.get.add');
+        Route::post('add', 'PaketController@postAdd')->name('admin.paket.post.add');
+
+        Route::get('edit/{id}', 'PaketController@getEdit')->name('admin.paket.get.edit');
+        Route::post('edit', 'PaketController@postEdit')->name('admin.paket.post.edit');
+
+        Route::get('delete/{id}', 'PaketController@delete')->name('admin.paket.delete');
+    });
+
+    Route::group(['prefix' => 'gallery'], function(){
+        Route::get('/', 'GalleryController@index')->name('admin.gallery.index');
+
+        Route::post('add', 'GalleryController@add')->name('admin.gallery.add');
+
+        Route::post('edit', 'GalleryController@edit')->name('admin.gallery.edit');
+
+        Route::get('delete/{id}', 'GalleryController@delete')->name('admin.gallery.delete');
+    });
+
+    Route::get('/keluar', 'UserController@keluar')->name('keluar');
 
 });
 

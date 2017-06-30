@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+
 use App\User;
 
 class UserController extends Controller
@@ -63,5 +65,10 @@ class UserController extends Controller
         }
     }
 
+    public function keluar(Request $request)
+    {
+        Auth::logout();
 
+        return redirect()->to('login')->with('successMessage', 'Anda berhasi logout');
+    }
 }

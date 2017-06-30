@@ -64,8 +64,7 @@ Beranda
           <h2 class="title">{{ $informasi->title }}</h2>
           <p class="desc">{{ $informasi->content }}</p>
           <ul>
-            <li style="width:50%;"><a href="#website"><span class="fa fa-globe"></span> Website</a></li>
-            <li style="width:50%;"><span class="fa fa-money"></span> $39.99</li>
+            <li style="width:100%;"><a href="{{ route('home.information.read', $informasi->slug) }}"><span class="fa fa-file"></span> Read More</a></li>
           </ul>
         </div>
       </li>

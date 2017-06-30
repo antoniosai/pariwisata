@@ -32,6 +32,11 @@ class FrontController extends Controller
         ]);
     }
 
+    public function showAllBuku()
+    {
+        return 'woke';
+    }
+
     public function detailPaket($id)
     {
         $paket = Paket::findOrFail($id);
@@ -120,9 +125,9 @@ class FrontController extends Controller
         ]);
     }
 
-    public function readInformation($id)
+    public function readInformation($slug)
     {
-        $information = Information::find($id);
+        $information = Information::where('slug', $slug)->first();
 
         return view('frontend.information.detail', [
             'information' => $information
